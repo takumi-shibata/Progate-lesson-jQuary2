@@ -5,12 +5,124 @@
     <title>Progate</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- scriptタグを用いて、jQueryを使えるように読み込んでください -->
+    <!-- scriptタグを用いて、jQueryの読み込み ※ライブラリはインターネット経由で読み込むのが一般的 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
   </head>
 
   <body>
-    <!-- scriptタグを用いて、script.jsを読み込んでください -->
+    <!-- ヘッダー -->
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+
+        <div class="header-right">
+          <div class="login" id="login-show">ログイン</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- サインアップモーダルの表示 -->
+    <div class="signup-modal-wrapper" id="signup-modal">
+      <div class="modal">
+        <!-- モーダル内閉じるボタン(clickイベント) -->
+        <div class="close-modal">
+          <!-- iクラス(質が異なるテキストを表すタグ、強調したい時に使う) -->
+          <i class="fa fa-2x fa-times"></i>
+        </div>
+
+        <div id="signup-form">
+          <h2>Emailで新規登録</h2>
+          <!-- action属性: formがサブミットされた時の次の動作を指定する属性、値に遷移先のURLを指定する -->
+          <form action="#">
+            <input class="form-control" type="text" placeholder="メールアドレス">
+            <input class="form-control" type="password" placeholder="パスワード">
+            <div id="submit-btn">新規登録</div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ログインモーダルの表示 -->
+    <div class="login-modal-wrapper" id="login-modal">
+      <div class="modal">
+        <!-- モーダル内閉じるボタン(clickイベント) -->
+        <div class="close-modal">
+          <!-- iクラス(質が異なるテキストを表すタグ、強調したい時に使う) -->
+          <i class="fa fa-2x fa-times"></i>
+        </div> 
+
+        <div id="login-form">
+          <h2>Emailログイン</h2>
+          <!-- action属性: formがサブミットされた時の次の動作を指定する属性、値に遷移先のURLを指定する -->
+          <form action="#">
+            <input class="form-control" type="text" placeholder="メールアドレス">
+            <input class="form-control" type="password" placeholder="パスワード">
+            <div id="submit-btn">ログイン</div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- トップ -->
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>LEARN TO CODE.<br>
+        LEARN TO BE CREATIVE.</h1>
+        <p>progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
+        <div class="btn signup signup-show">新規登録はこちら</div>
+        <p>or</p>
+        <div class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</div>
+        <div class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</div>
+      </div>
+    </div>
+
+    <!-- コンテンツ一覧 -->
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Learn Where to Get Started!</h2>
+        </div>
+
+        <div class="lessons">
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>FAQ</h2>
+        </div>
+        
+        <div class="faq">
+        </div>
+      </div>
+    </div>
+
+    <!-- メッセージ -->
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
+          <h3 id="tagline">Let's learn to code, learn to be creative!</h3>
+        </div>
+
+        <div class="btn message signup-show">さっそく開発する</div>
+      </div>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+      <div class="container">
+        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
+        <p>Learn to Code,Learn to be Creative.</p>
+      </div>
+    </footer>
+
+    <!-- scriptタグを用いて、script.jsファイルの読み込み -->
     <script src="script.js"></script>  
   </body>
 </html>
