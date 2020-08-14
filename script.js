@@ -16,4 +16,15 @@ $(function() {
     $('#signup-modal').fadeOut();
     $('#login-modal').fadeOut();
   });
+
+
+  // レッスン一覧のhoverイベント
+  $('.lesson-hover').hover(
+    function() {
+      
+    },
+    function() {
+      
+    }
+  );
 });
