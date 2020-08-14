@@ -217,6 +217,13 @@ header {
   /* テキストの表示を非表示(jQueryのhoverイベントでカーソルが乗った時に表示) */
   display: none;
 }
+
+/* jQuery側で追加・削除したクラス(HTMLにはなくても機能する ※擬似的なクラスだと思えばよい。) */
+/* カーソルが乗った時に「addClassメソッド」で「text-activeというclassを追加」し、文字を表示させ */
+/* カーソルが外れた時に「removeClassメソッド」で「text-activeというclassを削除」している */
+.text-active {
+  display: block;
+}
 /* -------------------*/
 
 
