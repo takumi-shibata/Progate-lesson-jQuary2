@@ -31,4 +31,25 @@ $(function() {
      $(this).find('.text-contents').removeClass('text-active');
     }
   );
+
+
+  // FAQアコーディオンの設定
+  $('.faq-list-item').click(function() {
+    var $answer = $(this).find('.answer');
+
+    // hasClassメソッド: 引数に指定したクラスを、オブジェクトが持っているか判定するときに使用する。オブジェクトがそのクラスを持っていればtrue、持っていなければfalse
+    // if文が「true」だった時、答えを隠す(openを削除)
+    if($answer.hasClass('open')) {
+      $answer.removeClass('open');
+      $answer.slideUp();
+      // 質問時の右側のマークを「＋」に変える処理
+      $(this).find('span').text('+');
+      // if文が「false」だった時、答えを見せる(openを追加)
+    } else {
+      $answer.addClass('open');
+      $answer.slideDown();
+      // 質問時の右側のマークを「ー」に変える処理
+      $(this).find('span').text('-');
+    }
+  });
 });
